@@ -26,30 +26,22 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
         StartButton.onClick.AddListener(ClickStart); //makes the function ClickStart happen when StartButton is clicked.
         CancelButton.onClick.AddListener(QuickCancel); //makes the function QuickCancel happen when StartButton is clicked.
 
+        quickStartButton.SetActive(false);
+
     }
 
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
-        //StartButton.SetActive(true);
+        quickStartButton.SetActive(true);
 
     }
 
     public void ClickStart()
     {
-
-
-        //start = !start; 
-        
-        //if (start)
-        //{
+            quickStartButton.SetActive(true);
             PhotonNetwork.JoinRandomRoom();
             Debug.Log("Quick start");
-       // }
-
-       // else QuickCancel();
-
-
 
     }
     public override void OnJoinRandomFailed(short returnCode, string message) //Callback function for if we fail to join a rooom
