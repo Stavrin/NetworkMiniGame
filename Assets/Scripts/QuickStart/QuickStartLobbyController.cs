@@ -9,20 +9,23 @@ using UnityEngine.UI;
 
 public class QuickStartLobbyController : MonoBehaviourPunCallbacks
 {
-    [SerializeField]
-    private Button StartButton;
-
-
+    
     [SerializeField]
     private GameObject quickStartButton; //button used for creating and joining a game.
     [SerializeField]
-    private GameObject quickCancelButton; //button used to stop searing for a game to join.
+    private Button StartButton;
+    [SerializeField]
+    private Button CancelButton; //button used to stop searing for a game to join.
+    [SerializeField]
+    private GameObject quickCancelButton;
+    [SerializeField]
     private int RoomSize;
     private bool start;
 
     void Awake()
     {
         StartButton.onClick.AddListener(ClickStart); //makes the function ClickStart happen when StartButton is clicked.
+        CancelButton.onClick.AddListener(QuickCancel); //makes the function QuickCancel happen when StartButton is clicked.
 
     }
 
