@@ -4,7 +4,6 @@ using UnityEngine;
 using Photon.Realtime;
 using Photon.Pun;
 using Unity.VisualScripting;
-using Unity.UI;
 using UnityEngine.UI;
 
 public class QuickStartLobbyController : MonoBehaviourPunCallbacks
