@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
 	public PhotonView phView;
 
     private int count;
+	public bool isFlat = true;
 
 	// At the start of the game..
 	void Start ()
@@ -53,6 +54,16 @@ public class PlayerController : MonoBehaviour {
 			// Add a physical force to our Player rigidbody using our 'movement' Vector3 above, 
 			// multiplying it by 'speed' - our public player speed that appears in the inspector
 			rb.AddForce (movement * speed);
+
+			Vector3 tilt = Input.acceleration;
+
+			if(isFlat)
+			{
+				tilt = Quaternion.Euler(90, 0, 0) * tilt;
+
+				rb.AddForce (tilt * speed);
+
+			}
 
         }
     }
