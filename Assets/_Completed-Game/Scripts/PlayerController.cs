@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 		SetCountText ();
 
 		// Set the text property of our Win Text UI to an empty string, making the 'You Win' (game over message) blank
-		winText.text = "";
+		//winText.text = "";
 	}
 
 	// Each physics step..

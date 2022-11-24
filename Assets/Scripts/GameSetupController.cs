@@ -8,13 +8,13 @@ public class GameSetupController : MonoBehaviour
 {
     [SerializeField]
     private GameObject SpawnPoint;
-    public int ID = null;
+    public int ID = 1;
 
     // This script will be added to any multiplayer scene
     void Start()
     {
-        ID = Random.Range(1, 5)
-        CreatePlayer(); //Create a networked player object for each player that loads into the multiplayer scenes.
+        ID = Random.Range(1, 5);
+        CreatePlayer(ID); //Create a networked player object for each player that loads into the multiplayer scenes.
     }
     private void CreatePlayer(int ID)
     {
