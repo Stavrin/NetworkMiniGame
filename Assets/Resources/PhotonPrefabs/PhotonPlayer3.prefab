@@ -171,6 +171,7 @@ MonoBehaviour:
   countText: {fileID: 0}
   winText: {fileID: 0}
   phView: {fileID: 0}
+  isFlat: 1
 --- !u!114 &1180946175294188064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,8 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PositionModel:
     SynchronizeEnabled: 1
-    TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 3
+    TeleportEnabled: 0
+    TeleportIfDistanceGreaterThan: 1
     InterpolateOption: 2
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 1
